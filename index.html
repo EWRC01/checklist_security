@@ -1,0 +1,2561 @@
+<div><p>Fuente: OWASP | Autor : Edwin Rodriguez | Empresa : Soluciones Roots Inc</p></div>
+<div>
+  <h1 data-heading="Lista de Verificación de Prácticas de Codificación Segura">
+    <div class="heading-collapse-indicator collapse-indicator collapse-icon">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="24"
+        height="24"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        class="svg-icon right-triangle">
+        <path d="M3 8L12 17L21 8"></path>
+      </svg>
+    </div>
+    Lista de Verificación de Prácticas de Codificación Segura
+  </h1>
+</div>
+<div>
+  <h2 data-heading="Validación de entradas">
+    <div class="heading-collapse-indicator collapse-indicator collapse-icon">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="24"
+        height="24"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        class="svg-icon right-triangle">
+        <path d="M3 8L12 17L21 8"></path>
+      </svg>
+    </div>
+    Validación de entradas
+  </h2>
+</div>
+<div>
+  <ul class="contains-task-list has-list-bullet">
+    <li
+      data-line="0"
+      data-task=" "
+      class="task-list-item">
+      <div class="list-bullet"></div>
+      <input
+        data-line="0"
+        type="checkbox"
+        class="task-list-item-checkbox" />
+      Realizar todas las validaciones de datos en un sistema confiable. Por ejemplo: el servidor
+      <br />
+    </li>
+    <li
+      data-line="2"
+      data-task=""
+      class="task-list-item">
+      <div class="list-bullet"></div>
+      <input
+        data-line="2"
+        type="checkbox"
+        class="task-list-item-checkbox" />
+      Identificar todas las fuentes de datos y clasificarlos como confiables o no. Validar todos los datos provenientes de fuentes no confiables. Por ejemplo: bases de datos, archivo, etc
+      <br />
+    </li>
+    <li
+      data-line="4"
+      data-task=""
+      class="task-list-item">
+      <div class="list-bullet"></div>
+      <input
+        data-line="4"
+        type="checkbox"
+        class="task-list-item-checkbox" />
+      Debería existir una rutina de validación de datos de entrada centralizada para la aplicación
+      <br />
+    </li>
+    <li
+      data-line="6"
+      data-task=""
+      class="task-list-item">
+      <div class="list-bullet"></div>
+      <input
+        data-line="6"
+        type="checkbox"
+        class="task-list-item-checkbox" />
+      Para todas las entradas de datos, especificar el juego de caracteres apropiado, tal como UTF-8
+      <br />
+    </li>
+    <li
+      data-line="8"
+      data-task=""
+      class="task-list-item">
+      <div class="list-bullet"></div>
+      <input
+        data-line="8"
+        type="checkbox"
+        class="task-list-item-checkbox" />
+      Codificar los datos a un juego de caracteres común antes de su validación (canonicalización)
+      <br />
+    </li>
+    <li
+      data-line="10"
+      data-task=""
+      class="task-list-item">
+      <div class="list-bullet"></div>
+      <input
+        data-line="10"
+        type="checkbox"
+        class="task-list-item-checkbox" />
+      Todas las fallas en la validación deber terminar en el rechazo del dato de entrada
+      <br />
+    </li>
+    <li
+      data-line="12"
+      data-task=""
+      class="task-list-item">
+      <div class="list-bullet"></div>
+      <input
+        data-line="12"
+        type="checkbox"
+        class="task-list-item-checkbox" />
+      Determinar si el sistema soportará juegps de caracteres UTF-8 extendidos y de ser así, validarlos luego de terminada la decodificación del UTF-8
+      <br />
+    </li>
+    <li
+      data-line="14"
+      data-task=""
+      class="task-list-item">
+      <div class="list-bullet"></div>
+      <input
+        data-line="14"
+        type="checkbox"
+        class="task-list-item-checkbox" />
+      Validar todos los datos brindados por el cliente antes de procesarlos, incluyendo todos los parámetros, URLs y contenidos de encabezados HTTP (por ejemplo nombres de Cookies y valores). Asegurarse de incluir los pedidos automáticos generados por JavaScript, Flash u otro código embebido
+      <br />
+    </li>
+    <li
+      data-line="16"
+      data-task=""
+      class="task-list-item">
+      <div class="list-bullet"></div>
+      <input
+        data-line="16"
+        type="checkbox"
+        class="task-list-item-checkbox" />
+      Verificar que los valores de los encabezados, tanto en solicitudes como en respuestas contengan sólo caracteres ASCII
+      <br />
+    </li>
+    <li
+      data-line="18"
+      data-task=""
+      class="task-list-item">
+      <div class="list-bullet"></div>
+      <input
+        data-line="18"
+        type="checkbox"
+        class="task-list-item-checkbox" />
+      Validar los datos provenientes de redirecciones. Un atacante puede enviar contenido malicioso directamente en el destino de la redirección, evitando la lógica de la aplicación y cualquier otra validación realizada antes de la redirección
+      <br />
+    </li>
+    <li
+      data-line="20"
+      data-task=""
+      class="task-list-item">
+      <div class="list-bullet"></div>
+      <input
+        data-line="20"
+        type="checkbox"
+        class="task-list-item-checkbox" />
+      Validar que los tipos de datos sean los esperados
+      <br />
+    </li>
+    <li
+      data-line="22"
+      data-task=""
+      class="task-list-item">
+      <div class="list-bullet"></div>
+      <input
+        data-line="22"
+        type="checkbox"
+        class="task-list-item-checkbox" />
+      Validar rangos de datos
+      <br />
+    </li>
+    <li
+      data-line="24"
+      data-task=""
+      class="task-list-item">
+      <div class="list-bullet"></div>
+      <input
+        data-line="24"
+        type="checkbox"
+        class="task-list-item-checkbox" />
+      Validar largos de datos
+      <br />
+    </li>
+    <li
+      data-line="26"
+      data-task=""
+      class="task-list-item">
+      <div class="list-bullet"></div>
+      <input
+        data-line="26"
+        type="checkbox"
+        class="task-list-item-checkbox" />
+      Validar toda entrada con una “lista permitida” que contenga los caracteres aceptados, siempre que sea posible
+      <br />
+    </li>
+    <li
+      data-line="28"
+      data-task=""
+      class="task-list-item">
+      <div class="list-bullet"></div>
+      <input
+        data-line="28"
+        type="checkbox"
+        class="task-list-item-checkbox" />
+      Si es necesario permitir el ingreso de&nbsp;
+      <a
+        data-tooltip-position="top"
+        aria-label="https://owasp.org/www-project-secure-coding-practices-quick-reference-guide/stable-es/02-checklist/05-checklist#Hazardous_Character"
+        rel="noopener"
+        class="external-link"
+        href="https://owasp.org/www-project-secure-coding-practices-quick-reference-guide/stable-es/02-checklist/05-checklist#Hazardous_Character"
+        target="_blank">
+        <em>carácteres peligrosos</em>
+      </a>
+      , implementar controles adicionales tales como la codificación de la salida, utilizar una API de seguridad y el registrar del uso de estos datos a través de la aplicación. Algunos ejemplos de caracteres peligrosos: &lt; &gt; " ' % ( ) &amp; + \ ' "
+      <br />
+    </li>
+    <li
+      data-line="30"
+      data-task=""
+      class="task-list-item">
+      <div class="list-bullet"></div>
+      <input
+        data-line="30"
+        type="checkbox"
+        class="task-list-item-checkbox" />
+      Si su rutina estándar de validación no contempla el ingreso de los ejemplos de datos anteriormente indicados, esta rutina debería de ser revisada puntualmente
+      <br />
+    </li>
+    <li
+      data-line="32"
+      data-task=""
+      class="task-list-item">
+      <div class="list-bullet"></div>
+      <input
+        data-line="32"
+        type="checkbox"
+        class="task-list-item-checkbox" />
+      Compruebe si hay bytes nulos (%00)
+      <br />
+    </li>
+    <li
+      data-line="34"
+      data-task=""
+      class="task-list-item">
+      <div class="list-bullet"></div>
+      <input
+        data-line="34"
+        type="checkbox"
+        class="task-list-item-checkbox" />
+      Compruebe si hay caracteres de nueva línea (%0d, %0a, \r, \n)
+      <br />
+    </li>
+    <li
+      data-line="36"
+      data-task=""
+      class="task-list-item">
+      <div class="list-bullet"></div>
+      <input
+        data-line="36"
+        type="checkbox"
+        class="task-list-item-checkbox" />
+      Compruebe si hay caracteres de alteraciones de ruta “punto, punto, barra” (../ o ..). En los casos en que se soportan sets de caracteres UTF-8 extendidos, implemente representaciones alternativas tales como: %c0%ae%c0%ae/ (utilice la canonicalización como forma de mitigar la doble codificación u otras formas de ofuscar ataques)
+      <br />
+    </li>
+  </ul>
+</div>
+<div>
+  <h3 data-heading="Codificación de salidas">
+    <div class="heading-collapse-indicator collapse-indicator collapse-icon">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="24"
+        height="24"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        class="svg-icon right-triangle">
+        <path d="M3 8L12 17L21 8"></path>
+      </svg>
+    </div>
+    Codificación de salidas
+  </h3>
+</div>
+<div>
+  <ul class="contains-task-list has-list-bullet">
+    <li
+      data-line="0"
+      data-task=""
+      class="task-list-item">
+      <div class="list-bullet"></div>
+      <input
+        data-line="0"
+        type="checkbox"
+        class="task-list-item-checkbox" />
+      Realice toda codificación en una zona de confianza (Por ejemplo, en el servidor)
+    </li>
+    <li
+      data-line="1"
+      data-task=""
+      class="task-list-item">
+      <div class="list-bullet"></div>
+      <input
+        data-line="1"
+        type="checkbox"
+        class="task-list-item-checkbox" />
+      Utilice una rutina probada y estándar para cada tipo de codificación de salida
+    </li>
+    <li
+      data-line="2"
+      data-task=""
+      class="task-list-item">
+      <div class="list-bullet"></div>
+      <input
+        data-line="2"
+        type="checkbox"
+        class="task-list-item-checkbox" />
+      Codifique las salidas tomando en cuenta el contexto de todos los datos devueltos al cliente que se encuentre fuera de la frontera de confianza de la aplicación. La codificación de entidades HTML es un ejemplo, aunque no sea suficiente en todos los casos
+    </li>
+    <li
+      data-line="3"
+      data-task=""
+      class="task-list-item">
+      <div class="list-bullet"></div>
+      <input
+        data-line="3"
+        type="checkbox"
+        class="task-list-item-checkbox" />
+      Codifique todos los caracteres salvo que sean reconocidos como seguros por el intérprete al que están destinados
+    </li>
+    <li
+      data-line="4"
+      data-task=""
+      class="task-list-item">
+      <div class="list-bullet"></div>
+      <input
+        data-line="4"
+        type="checkbox"
+        class="task-list-item-checkbox" />
+      Sanitice según el contexto todas las salidas de datos no confiables hacia consultas SQL, XML y LDAP
+    </li>
+    <li
+      data-line="5"
+      data-task=""
+      class="task-list-item">
+      <div class="list-bullet"></div>
+      <input
+        data-line="5"
+        type="checkbox"
+        class="task-list-item-checkbox" />
+      Sanitice todas las salidas de datos no confiables hacia comandos del sistema operativo
+    </li>
+  </ul>
+</div>
+<div>
+  <h3 data-heading="Autenticación y gestión de contraseñas">
+    <div class="heading-collapse-indicator collapse-indicator collapse-icon">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="24"
+        height="24"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        class="svg-icon right-triangle">
+        <path d="M3 8L12 17L21 8"></path>
+      </svg>
+    </div>
+    Autenticación y gestión de contraseñas
+  </h3>
+</div>
+<div>
+  <ul class="contains-task-list has-list-bullet">
+    <li
+      data-line="0"
+      data-task=""
+      class="task-list-item">
+      <div class="list-bullet"></div>
+      <input
+        data-line="0"
+        type="checkbox"
+        class="task-list-item-checkbox" />
+      Requerir autenticación para todos los recursos y páginas excepto aquellas específicamente clasificadas como públicas
+    </li>
+    <li
+      data-line="1"
+      data-task=""
+      class="task-list-item">
+      <div class="list-bullet"></div>
+      <input
+        data-line="1"
+        type="checkbox"
+        class="task-list-item-checkbox" />
+      Todos los controles de autenticación deben ser efectuados dentro de la frontera de confianza, por ejemplo: el servidor
+    </li>
+    <li
+      data-line="2"
+      data-task=""
+      class="task-list-item">
+      <div class="list-bullet"></div>
+      <input
+        data-line="2"
+        type="checkbox"
+        class="task-list-item-checkbox" />
+      Establecer y utilizar servicios de autenticación estándares y probados cuando sea posible
+    </li>
+    <li
+      data-line="3"
+      data-task=""
+      class="task-list-item">
+      <div class="list-bullet"></div>
+      <input
+        data-line="3"
+        type="checkbox"
+        class="task-list-item-checkbox" />
+      Utilizar una implementación centralizada para todos los controles de autenticación, incluyendo bibliotecas que invoquen a servicios externos de autenticación
+    </li>
+    <li
+      data-line="4"
+      data-task=""
+      class="task-list-item">
+      <div class="list-bullet"></div>
+      <input
+        data-line="4"
+        type="checkbox"
+        class="task-list-item-checkbox" />
+      Segregar la lógica de autenticación, de la del recurso solicitado y utilizar redirecciones desde y hacia el control centralizado de autenticación
+    </li>
+    <li
+      data-line="5"
+      data-task=""
+      class="task-list-item">
+      <div class="list-bullet"></div>
+      <input
+        data-line="5"
+        type="checkbox"
+        class="task-list-item-checkbox" />
+      Todos los controles de autenticación deben fallar de una forma segura
+    </li>
+    <li
+      data-line="6"
+      data-task=""
+      class="task-list-item">
+      <div class="list-bullet"></div>
+      <input
+        data-line="6"
+        type="checkbox"
+        class="task-list-item-checkbox" />
+      Todas las funciones administrativas y de gestión de cuentas deben ser al menos tan seguras como el mecanismo primario de autenticación
+    </li>
+    <li
+      data-line="7"
+      data-task=""
+      class="task-list-item">
+      <div class="list-bullet"></div>
+      <input
+        data-line="7"
+        type="checkbox"
+        class="task-list-item-checkbox" />
+      Si la aplicación gestiona un almacén de credenciales, se debe asegurar que únicamente se almacena el hash con sal de las contraseñas y que el archivo/tabla que guarda las contraseñas y claves solo puede ser escrito por la aplicación (si es posible, no utilizar el algoritmo de hash MD5)
+    </li>
+    <li
+      data-line="8"
+      data-task=""
+      class="task-list-item">
+      <div class="list-bullet"></div>
+      <input
+        data-line="8"
+        type="checkbox"
+        class="task-list-item-checkbox" />
+      El hash de las contraseñas debe ser implementado en dentro de la frontera de confianza. (por ejemplo: el servidor)
+    </li>
+    <li
+      data-line="9"
+      data-task=""
+      class="task-list-item">
+      <div class="list-bullet"></div>
+      <input
+        data-line="9"
+        type="checkbox"
+        class="task-list-item-checkbox" />
+      Validar los datos de autenticación únicamente luego haber completado todos los datos de entrada, especialmente en implementaciones de autenticación secuencial
+    </li>
+    <li
+      data-line="10"
+      data-task=""
+      class="task-list-item">
+      <div class="list-bullet"></div>
+      <input
+        data-line="10"
+        type="checkbox"
+        class="task-list-item-checkbox" />
+      Las respuestas a los fallos en la autenticación no deben indicar cuál parte de la autenticación fue incorrecta. A modo de ejemplo, en lugar de "usuario invalido" o "contraseña invalida", utilizar "usuario y/o contraseña inválidos" en ambos casos. Las repuestas a los errores deben ser idénticas tanto a nivel de lo desplegado como a nivel del código fuente.
+    </li>
+    <li
+      data-line="11"
+      data-task=""
+      class="task-list-item">
+      <div class="list-bullet"></div>
+      <input
+        data-line="11"
+        type="checkbox"
+        class="task-list-item-checkbox" />
+      Utilizar autenticación para conexiones a sistemas externos que involucren información o funciones sensibles.
+    </li>
+    <li
+      data-line="12"
+      data-task=""
+      class="task-list-item">
+      <div class="list-bullet"></div>
+      <input
+        data-line="12"
+        type="checkbox"
+        class="task-list-item-checkbox" />
+      Las credenciales de autenticación para acceder a servicios externos a la aplicación deben ser cifrados y almacenados en ubicaciones protegidas dentro de la frontera de confianza (por ejemplo: el servidor). El código fuente NO es una ubicación segura.
+    </li>
+    <li
+      data-line="13"
+      data-task=""
+      class="task-list-item">
+      <div class="list-bullet"></div>
+      <input
+        data-line="13"
+        type="checkbox"
+        class="task-list-item-checkbox" />
+      Utilizar únicamente pedidos del tipo HTTP POST para la transmisión de credenciales de autenticación.
+    </li>
+    <li
+      data-line="14"
+      data-task=""
+      class="task-list-item">
+      <div class="list-bullet"></div>
+      <input
+        data-line="14"
+        type="checkbox"
+        class="task-list-item-checkbox" />
+      Utilizar únicamente conexiones cifradas o cifrar los datos para el envío de contraseñas que no sean temporales, por ejemplo: correo cifrados. Contraseñas temporales (como aquellas asociadas con reseteos por correo electrónico), pueden ser una excepción.
+    </li>
+    <li
+      data-line="15"
+      data-task=""
+      class="task-list-item">
+      <div class="list-bullet"></div>
+      <input
+        data-line="15"
+        type="checkbox"
+        class="task-list-item-checkbox" />
+      Aplicar por medio de una política o regulación los requerimientos de complejidad de la contraseña. Las credenciales de autenticación deben ser suficientes como para resistir aquellos ataques típicos de las amenazas en el entorno del sistema, por ejemplo: obligar el uso de combinaciones de caracteres numéricos/alfanuméricos y/o caracteres especiales.
+    </li>
+    <li
+      data-line="16"
+      data-task=""
+      class="task-list-item">
+      <div class="list-bullet"></div>
+      <input
+        data-line="16"
+        type="checkbox"
+        class="task-list-item-checkbox" />
+      Aplicar por medio de una política o regulación los requerimientos de longitud de la contraseña. Comúnmente se utilizan ocho caracteres, pero dieciséis es mejor, adicionalmente considerar el uso de frases de varias palabras.
+    </li>
+    <li
+      data-line="17"
+      data-task=""
+      class="task-list-item">
+      <div class="list-bullet"></div>
+      <input
+        data-line="17"
+        type="checkbox"
+        class="task-list-item-checkbox" />
+      No se debe desplegar en la pantalla la contraseña ingresada. A modo de ejemplo, en formularios web, utilizar el tipo de entrada "password" (input type="password").
+    </li>
+    <li
+      data-line="18"
+      data-task=""
+      class="task-list-item">
+      <div class="list-bullet"></div>
+      <input
+        data-line="18"
+        type="checkbox"
+        class="task-list-item-checkbox" />
+      Deshabilitar las cuentas luego de un número establecido de intentos inválidos de inicio de sesión(por ejemplo, cinco intentos). La cuenta debe ser dehabilitada por un periodo de tiempo suficiente como para desalentar una inferencia de credenciales por fuerza bruta, pero no tanto como para provocar un ataque de denegación de servicio.
+    </li>
+    <li
+      data-line="19"
+      data-task=""
+      class="task-list-item">
+      <div class="list-bullet"></div>
+      <input
+        data-line="19"
+        type="checkbox"
+        class="task-list-item-checkbox" />
+      El cambio y reseteo de contraseñas requieren los mismos niveles de control asociados a la creación y autenticación de cuentas.
+    </li>
+    <li
+      data-line="20"
+      data-task=""
+      class="task-list-item">
+      <div class="list-bullet"></div>
+      <input
+        data-line="20"
+        type="checkbox"
+        class="task-list-item-checkbox" />
+      Las preguntas para el reseteo de contraseñas deben contemplar un amplio rango de respuestas aleatorias, por ejemplo: "libro favorito" es una mala pregunta dado que "la biblia" es una respuesta muy común.
+    </li>
+    <li
+      data-line="21"
+      data-task=""
+      class="task-list-item">
+      <div class="list-bullet"></div>
+      <input
+        data-line="21"
+        type="checkbox"
+        class="task-list-item-checkbox" />
+      Si se utiliza la recuperación de contraseña a través del correo electrónico, se debe enviar únicamente un link o contraseña temporal a una casillas previamente registrada en el sistema.
+    </li>
+    <li
+      data-line="22"
+      data-task=""
+      class="task-list-item">
+      <div class="list-bullet"></div>
+      <input
+        data-line="22"
+        type="checkbox"
+        class="task-list-item-checkbox" />
+      Las contraseñas y links temporales deben tener un corto periodo de validez.
+    </li>
+    <li
+      data-line="23"
+      data-task=""
+      class="task-list-item">
+      <div class="list-bullet"></div>
+      <input
+        data-line="23"
+        type="checkbox"
+        class="task-list-item-checkbox" />
+      Obligar el cambio de contraseñas temporales luego de su utilización.
+    </li>
+    <li
+      data-line="24"
+      data-task=""
+      class="task-list-item">
+      <div class="list-bullet"></div>
+      <input
+        data-line="24"
+        type="checkbox"
+        class="task-list-item-checkbox" />
+      Notificar a los usuarios cada vez que se produce un reseteo de contraseña.
+    </li>
+    <li
+      data-line="25"
+      data-task=""
+      class="task-list-item">
+      <div class="list-bullet"></div>
+      <input
+        data-line="25"
+        type="checkbox"
+        class="task-list-item-checkbox" />
+      Prevenir la reutilización de contraseñas.
+    </li>
+    <li
+      data-line="26"
+      data-task=""
+      class="task-list-item">
+      <div class="list-bullet"></div>
+      <input
+        data-line="26"
+        type="checkbox"
+        class="task-list-item-checkbox" />
+      Las contraseñas deben tener al menos un día de antigüedad antes de poder ser cambiadas, de forma de evitar ataques de reutilización de contraseñas.
+    </li>
+    <li
+      data-line="27"
+      data-task=""
+      class="task-list-item">
+      <div class="list-bullet"></div>
+      <input
+        data-line="27"
+        type="checkbox"
+        class="task-list-item-checkbox" />
+      Hacer cumplir por medio de una política o regulación los requerimientos de cambio de contraseña. Los sistemas críticos pueden requerir cambios más frecuentes que otros sistemas. El tiempo entre cada reseteo debe ser controlado administrativamente.
+    </li>
+    <li
+      data-line="28"
+      data-task=""
+      class="task-list-item">
+      <div class="list-bullet"></div>
+      <input
+        data-line="28"
+        type="checkbox"
+        class="task-list-item-checkbox" />
+      Deshabilitar la funcionalidad de "auto completar" campos de contraseñas.
+    </li>
+    <li
+      data-line="29"
+      data-task=""
+      class="task-list-item">
+      <div class="list-bullet"></div>
+      <input
+        data-line="29"
+        type="checkbox"
+        class="task-list-item-checkbox" />
+      El último acceso (fallido o exitoso) debe ser reportado al usuario en su siguiente acceso exitoso.
+    </li>
+    <li
+      data-line="30"
+      data-task=""
+      class="task-list-item">
+      <div class="list-bullet"></div>
+      <input
+        data-line="30"
+        type="checkbox"
+        class="task-list-item-checkbox" />
+      Implementar un monitoreo para identificar ataques a múltiples cuentas utilizando la misma contraseña. Este patrón de ataque es utilizado parar superar bloqueos estándar cuando los nombres de usuario pueden ser recopilados o adivinados
+    </li>
+  </ul>
+</div>
+<div>
+  <h3 data-heading="Administración de sesiones">
+    <div class="heading-collapse-indicator collapse-indicator collapse-icon">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="24"
+        height="24"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        class="svg-icon right-triangle">
+        <path d="M3 8L12 17L21 8"></path>
+      </svg>
+    </div>
+    Administración de sesiones
+  </h3>
+</div>
+<div>
+  <ul class="contains-task-list has-list-bullet">
+    <li
+      data-line="0"
+      data-task=""
+      class="task-list-item">
+      <div class="list-bullet"></div>
+      <input
+        data-line="0"
+        type="checkbox"
+        class="task-list-item-checkbox" />
+      Utilizar las funciones para la gestión de sesiones propias del framework de desarrollo o del servidor de aplicaciones. Sólo se deben reconocer estos identificadores como válidos
+    </li>
+    <li
+      data-line="1"
+      data-task=""
+      class="task-list-item">
+      <div class="list-bullet"></div>
+      <input
+        data-line="1"
+        type="checkbox"
+        class="task-list-item-checkbox" />
+      La creación de identificadores de sesión solo debe ser realizada dentro de una frontera de confianza (el servidor, por ejemplo)
+    </li>
+    <li
+      data-line="2"
+      data-task=""
+      class="task-list-item">
+      <div class="list-bullet"></div>
+      <input
+        data-line="2"
+        type="checkbox"
+        class="task-list-item-checkbox" />
+      Los controles de gestión de sesiones deben utilizar algoritmos que generen identificadores suficientemente aleatorios
+    </li>
+    <li
+      data-line="3"
+      data-task=""
+      class="task-list-item">
+      <div class="list-bullet"></div>
+      <input
+        data-line="3"
+        type="checkbox"
+        class="task-list-item-checkbox" />
+      Definir el dominio y ruta para las cookies que contienen identificadores de sesión autenticados con un valor suficientemente estricto para el sitio
+    </li>
+    <li
+      data-line="4"
+      data-task=""
+      class="task-list-item">
+      <div class="list-bullet"></div>
+      <input
+        data-line="4"
+        type="checkbox"
+        class="task-list-item-checkbox" />
+      La función de fin de sesión (logout) debe terminar completamente con la sesión o conexión asociada
+    </li>
+    <li
+      data-line="5"
+      data-task=""
+      class="task-list-item">
+      <div class="list-bullet"></div>
+      <input
+        data-line="5"
+        type="checkbox"
+        class="task-list-item-checkbox" />
+      La función de fin de sesión (logout) debe estar disponibleen todas las páginas protegidas por autenticación
+    </li>
+    <li
+      data-line="6"
+      data-task=""
+      class="task-list-item">
+      <div class="list-bullet"></div>
+      <input
+        data-line="6"
+        type="checkbox"
+        class="task-list-item-checkbox" />
+      Establecer un tiempo de inactividad de la sesión lo más corto posible, balanceando los riesgos con los requerimientos del negocio. En la mayoría de los casos, nunca debería ser superior a algunas horas
+    </li>
+    <li
+      data-line="7"
+      data-task=""
+      class="task-list-item">
+      <div class="list-bullet"></div>
+      <input
+        data-line="7"
+        type="checkbox"
+        class="task-list-item-checkbox" />
+      Deshabilitar logeos persistentes y efectuar finalizaciones periódicas de sesiones, incluso cuando la sesión se encuentra activa. Esto aplica especialmente en aplicaciones ricas en conexiones de red o que se conectan a sistemas críticos. El período de tiempo para finalizar la sesión debe de ser compatible con las necesidades del negocio. Además, el usuario debe recibir las notificaciones suficientes para poder mitigar impactos negativos
+    </li>
+    <li
+      data-line="8"
+      data-task=""
+      class="task-list-item">
+      <div class="list-bullet"></div>
+      <input
+        data-line="8"
+        type="checkbox"
+        class="task-list-item-checkbox" />
+      Si una sesión fue establecida antes del inicio de sesión, cerrar dicha sesión y establecer una nueva luego de un login exitoso.
+    </li>
+    <li
+      data-line="9"
+      data-task=""
+      class="task-list-item">
+      <div class="list-bullet"></div>
+      <input
+        data-line="9"
+        type="checkbox"
+        class="task-list-item-checkbox" />
+      Generar un nuevo identificador de sesión luego de cada re autenticación.
+    </li>
+    <li
+      data-line="10"
+      data-task=""
+      class="task-list-item">
+      <div class="list-bullet"></div>
+      <input
+        data-line="10"
+        type="checkbox"
+        class="task-list-item-checkbox" />
+      No permitir logeos concurrentes con el mismo identificador de usuario.
+    </li>
+    <li
+      data-line="11"
+      data-task=""
+      class="task-list-item">
+      <div class="list-bullet"></div>
+      <input
+        data-line="11"
+        type="checkbox"
+        class="task-list-item-checkbox" />
+      No exponer identificadores de sesión en URLs, mensajes de error ni logs. Los identificadores de sesión solo deben ser ubicados en la cookie HTTP. A modo de ejemplo, no transmitir el identificador de sesión como un parámetro GET
+    </li>
+    <li
+      data-line="12"
+      data-task=""
+      class="task-list-item">
+      <div class="list-bullet"></div>
+      <input
+        data-line="12"
+        type="checkbox"
+        class="task-list-item-checkbox" />
+      Proteger de accesos no autorizados los datos de las sesiones, por parte de otros usuarios del servidor, implementando los controles de acceso acordes
+    </li>
+    <li
+      data-line="13"
+      data-task=""
+      class="task-list-item">
+      <div class="list-bullet"></div>
+      <input
+        data-line="13"
+        type="checkbox"
+        class="task-list-item-checkbox" />
+      Generar un nuevo identificador de sesión y desactivar el anterior de forma periódica. Esto puede mitigar algunos escenarios de robo de sesiones donde el identificador es comprometido
+    </li>
+    <li
+      data-line="14"
+      data-task=""
+      class="task-list-item">
+      <div class="list-bullet"></div>
+      <input
+        data-line="14"
+        type="checkbox"
+        class="task-list-item-checkbox" />
+      Generar un nuevo identificador de sesión si la conexión cambia de HTTP a HTTPS, como puede suceder durante la autenticación. Dentro de la aplicación es recomendable utilizar siempre HTTPS en lugar de cambiar entre HTTP y HTTPS
+    </li>
+    <li
+      data-line="15"
+      data-task=""
+      class="task-list-item">
+      <div class="list-bullet"></div>
+      <input
+        data-line="15"
+        type="checkbox"
+        class="task-list-item-checkbox" />
+      Uso de complementos de gestión de sesión para operaciones sensibles del lado del servidor para operaciones sensibles (como la gestión de cuentas de usuarios). Algunos ejemplos son el uso de tokens o parámetros generados aleatoramente para la sesión. Este método puede ser utilizado para prevenir ataques de Falsificación de petición en sitios cruzados (Cross Site Request Forgery Attacks, o CSRF)
+    </li>
+    <li
+      data-line="16"
+      data-task=""
+      class="task-list-item">
+      <div class="list-bullet"></div>
+      <input
+        data-line="16"
+        type="checkbox"
+        class="task-list-item-checkbox" />
+      Uso de complementos de gestión de sesión para operaciones sensibles o críticas utilizando tokens o parámetros por cada pedido (per request) en lugar de por sesión
+    </li>
+    <li
+      data-line="17"
+      data-task=""
+      class="task-list-item">
+      <div class="list-bullet"></div>
+      <input
+        data-line="17"
+        type="checkbox"
+        class="task-list-item-checkbox" />
+      Configurar el atributo "seguro" (secure) para las cookies transmitidas sobre una conexión TLS
+    </li>
+    <li
+      data-line="18"
+      data-task=""
+      class="task-list-item">
+      <div class="list-bullet"></div>
+      <input
+        data-line="18"
+        type="checkbox"
+        class="task-list-item-checkbox" />
+      Configurar las cookies con el atributo HttpOnly, salvo que se requiera específicamente acceso desde los scripts del lado del cliente, para leer o configurar una cookie
+    </li>
+  </ul>
+</div>
+<div>
+  <h3 data-heading="Control de Acceso">
+    <div class="heading-collapse-indicator collapse-indicator collapse-icon">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="24"
+        height="24"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        class="svg-icon right-triangle">
+        <path d="M3 8L12 17L21 8"></path>
+      </svg>
+    </div>
+    Control de Acceso
+  </h3>
+</div>
+<div>
+  <ul class="contains-task-list has-list-bullet">
+    <li
+      data-line="0"
+      data-task=""
+      class="task-list-item">
+      <div class="list-bullet"></div>
+      <input
+        data-line="0"
+        type="checkbox"
+        class="task-list-item-checkbox" />
+      Para el flujo decisiones de autorización, utilizar únicamente objetos confiables del sistema. Por ejemplo, objetos de sesión del lado del servidor
+    </li>
+    <li
+      data-line="1"
+      data-task=""
+      class="task-list-item">
+      <div class="list-bullet"></div>
+      <input
+        data-line="1"
+        type="checkbox"
+        class="task-list-item-checkbox" />
+      Utilizar un único componente para el chequeo de autorizaciones para todo el sitio. Esto incluye bibliotecas que invoquen a servicios de autorización externos
+    </li>
+    <li
+      data-line="2"
+      data-task=""
+      class="task-list-item">
+      <div class="list-bullet"></div>
+      <input
+        data-line="2"
+        type="checkbox"
+        class="task-list-item-checkbox" />
+      Los controles de acceso deben fallar de forma segura
+    </li>
+    <li
+      data-line="3"
+      data-task=""
+      class="task-list-item">
+      <div class="list-bullet"></div>
+      <input
+        data-line="3"
+        type="checkbox"
+        class="task-list-item-checkbox" />
+      Denegar todos los accesos en caso que la aplicación no pueda acceder a la información de configuración de seguridad
+    </li>
+    <li
+      data-line="4"
+      data-task=""
+      class="task-list-item">
+      <div class="list-bullet"></div>
+      <input
+        data-line="4"
+        type="checkbox"
+        class="task-list-item-checkbox" />
+      Requerir controles de autorización en cada solicitud, incluyendo aquellos creados por scripts en el servidor, "includes" y pedidos AJAX o Flash desde el lado del cliente
+    </li>
+    <li
+      data-line="5"
+      data-task=""
+      class="task-list-item">
+      <div class="list-bullet"></div>
+      <input
+        data-line="5"
+        type="checkbox"
+        class="task-list-item-checkbox" />
+      Separar lógica privilegiada del resto del código de la aplicación
+    </li>
+    <li
+      data-line="6"
+      data-task=""
+      class="task-list-item">
+      <div class="list-bullet"></div>
+      <input
+        data-line="6"
+        type="checkbox"
+        class="task-list-item-checkbox" />
+      Restringir acceso a archivos u otros recursos, incluyendo aquellos fuera del control directo de la aplicación, únicamente a usuarios autorizados
+    </li>
+    <li
+      data-line="7"
+      data-task=""
+      class="task-list-item">
+      <div class="list-bullet"></div>
+      <input
+        data-line="7"
+        type="checkbox"
+        class="task-list-item-checkbox" />
+      Restringir el acceso a las URL protegidas sólo a los usuarios autorizados
+    </li>
+    <li
+      data-line="8"
+      data-task=""
+      class="task-list-item">
+      <div class="list-bullet"></div>
+      <input
+        data-line="8"
+        type="checkbox"
+        class="task-list-item-checkbox" />
+      Restringir el acceso a las funciones protegidas únicamente a los usuarios autorizados
+    </li>
+    <li
+      data-line="9"
+      data-task=""
+      class="task-list-item">
+      <div class="list-bullet"></div>
+      <input
+        data-line="9"
+        type="checkbox"
+        class="task-list-item-checkbox" />
+      Restringir las referencias directas a objetos únicamente a los usuarios autorizados
+    </li>
+    <li
+      data-line="10"
+      data-task=""
+      class="task-list-item">
+      <div class="list-bullet"></div>
+      <input
+        data-line="10"
+        type="checkbox"
+        class="task-list-item-checkbox" />
+      Restringir el acceso a los servicios sólo a los usuarios autorizados
+    </li>
+    <li
+      data-line="11"
+      data-task=""
+      class="task-list-item">
+      <div class="list-bullet"></div>
+      <input
+        data-line="11"
+        type="checkbox"
+        class="task-list-item-checkbox" />
+      Restringir el acceso a información de la aplicación, solo a usuarios autorizados
+    </li>
+    <li
+      data-line="12"
+      data-task=""
+      class="task-list-item">
+      <div class="list-bullet"></div>
+      <input
+        data-line="12"
+        type="checkbox"
+        class="task-list-item-checkbox" />
+      Restringir el acceso a los atributos de usuario y datos y a la información sobre políticas utilizados por los controles de acceso
+    </li>
+    <li
+      data-line="13"
+      data-task=""
+      class="task-list-item">
+      <div class="list-bullet"></div>
+      <input
+        data-line="13"
+        type="checkbox"
+        class="task-list-item-checkbox" />
+      Restringir el acceso a la información de configuración relevante para la seguridad sólo a usuarios autorizados
+    </li>
+    <li
+      data-line="14"
+      data-task=""
+      class="task-list-item">
+      <div class="list-bullet"></div>
+      <input
+        data-line="14"
+        type="checkbox"
+        class="task-list-item-checkbox" />
+      Las reglas de control de acceso implementadas del lado del servidor y en la capa de presentación, deben coincidir
+    </li>
+    <li
+      data-line="15"
+      data-task=""
+      class="task-list-item">
+      <div class="list-bullet"></div>
+      <input
+        data-line="15"
+        type="checkbox"
+        class="task-list-item-checkbox" />
+      Si los datos de estado deben almacenarse en el cliente, deben ser cifrados y comprobada su integridad en el servidor para detectar manipulaciones
+    </li>
+    <li
+      data-line="16"
+      data-task=""
+      class="task-list-item">
+      <div class="list-bullet"></div>
+      <input
+        data-line="16"
+        type="checkbox"
+        class="task-list-item-checkbox" />
+      Hacer que flujos de aplicación que cumplan con las reglas del negocio
+    </li>
+    <li
+      data-line="17"
+      data-task=""
+      class="task-list-item">
+      <div class="list-bullet"></div>
+      <input
+        data-line="17"
+        type="checkbox"
+        class="task-list-item-checkbox" />
+      Limitar el número de transacciones que un usuario común o un dispositivo puede ejecutar en un período de tiempo dado. La tasa de transacciones/tiempo debe ser mayor a la necesidad del negocio, pero suficientemente bajo para detectar ataques automatizados
+    </li>
+    <li
+      data-line="18"
+      data-task=""
+      class="task-list-item">
+      <div class="list-bullet"></div>
+      <input
+        data-line="18"
+        type="checkbox"
+        class="task-list-item-checkbox" />
+      Utilizar el header "referer" sólo como un chequeo complementario. Nunca debe ser utilizado como chequeo de autorización, ya que puede ser suplantado
+    </li>
+    <li
+      data-line="19"
+      data-task=""
+      class="task-list-item">
+      <div class="list-bullet"></div>
+      <input
+        data-line="19"
+        type="checkbox"
+        class="task-list-item-checkbox" />
+      Si se permiten sesiones autenticadas largas, revalide periódicamente la autorización de un usuario para asegurarse de que sus privilegios no han cambiado y, si es así, cerrar la sesión del usuario y obligarle a volver a autenticarse
+    </li>
+    <li
+      data-line="20"
+      data-task=""
+      class="task-list-item">
+      <div class="list-bullet"></div>
+      <input
+        data-line="20"
+        type="checkbox"
+        class="task-list-item-checkbox" />
+      Implemente la auditoría de cuentas y aplique la desactivación de cuentas no utilizadas (por ejemplo, después de no más de 30 días de la expiración de la contraseña de una cuenta)
+    </li>
+    <li
+      data-line="21"
+      data-task=""
+      class="task-list-item">
+      <div class="list-bullet"></div>
+      <input
+        data-line="21"
+        type="checkbox"
+        class="task-list-item-checkbox" />
+      La aplicación debe permitir deshabilitar y terminar cuentas una vez que se termina la autorización. Por ejemplo ante un cambio de rol,
+      <br />
+    </li>
+  </ul>
+</div>
+<div>
+  <h3 data-heading="Prácticas Criptográficas">
+    <div class="heading-collapse-indicator collapse-indicator collapse-icon">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="24"
+        height="24"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        class="svg-icon right-triangle">
+        <path d="M3 8L12 17L21 8"></path>
+      </svg>
+    </div>
+    Prácticas Criptográficas
+  </h3>
+</div>
+<div>
+  <ul class="contains-task-list has-list-bullet">
+    <li
+      data-line="0"
+      data-task=""
+      class="task-list-item">
+      <div class="list-bullet"></div>
+      <input
+        data-line="0"
+        type="checkbox"
+        class="task-list-item-checkbox" />
+      Todas las funciones de criptografía de la aplicación deben ser implementadas en sistemas de confiables (el servidor, por ejemplo)
+    </li>
+    <li
+      data-line="1"
+      data-task=""
+      class="task-list-item">
+      <div class="list-bullet"></div>
+      <input
+        data-line="1"
+        type="checkbox"
+        class="task-list-item-checkbox" />
+      Proteger secretos maestros de accesos no autorizados
+    </li>
+    <li
+      data-line="2"
+      data-task=""
+      class="task-list-item">
+      <div class="list-bullet"></div>
+      <input
+        data-line="2"
+        type="checkbox"
+        class="task-list-item-checkbox" />
+      Los módulos criptográficos deben fallar en forma segura
+    </li>
+    <li
+      data-line="3"
+      data-task=""
+      class="task-list-item">
+      <div class="list-bullet"></div>
+      <input
+        data-line="3"
+        type="checkbox"
+        class="task-list-item-checkbox" />
+      Todos los números aleatorios, nombres aleatorios de archivos, GUIDs, y cadenas de caracteres aleatorios, deben generarse utilizando el módulos aprobado para tal fin, tendiendo a que los valores generados no sean predecibles
+    </li>
+    <li
+      data-line="4"
+      data-task=""
+      class="task-list-item">
+      <div class="list-bullet"></div>
+      <input
+        data-line="4"
+        type="checkbox"
+        class="task-list-item-checkbox" />
+      Los módulos criptrográficos utilizados por la aplicación deben cumplir con FIPS 140-2 o con su estándar equivalente. Ver
+      <a
+        data-tooltip-position="top"
+        aria-label="http://csrc.nist.gov/groups/STM/cmvp/validation.html"
+        rel="noopener"
+        class="external-link"
+        href="http://csrc.nist.gov/groups/STM/cmvp/validation.html"
+        target="_blank">
+        NIST Cryptographic Module Validation Program
+      </a>
+    </li>
+    <li
+      data-line="5"
+      data-task=""
+      class="task-list-item">
+      <div class="list-bullet"></div>
+      <input
+        data-line="5"
+        type="checkbox"
+        class="task-list-item-checkbox" />
+      Establecer y utilizar una política y procesos de cómo gestionar las claves criptográficas
+    </li>
+  </ul>
+</div>
+<div>
+  <h3 data-heading="Manejo de errores y Logs">
+    <div class="heading-collapse-indicator collapse-indicator collapse-icon">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="24"
+        height="24"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        class="svg-icon right-triangle">
+        <path d="M3 8L12 17L21 8"></path>
+      </svg>
+    </div>
+    Manejo de errores y Logs
+  </h3>
+</div>
+<div>
+  <ul class="contains-task-list has-list-bullet">
+    <li
+      data-line="0"
+      data-task=""
+      class="task-list-item">
+      <div class="list-bullet"></div>
+      <input
+        data-line="0"
+        type="checkbox"
+        class="task-list-item-checkbox" />
+      No divulgar información sensible en respuestas de error, incluyendo detalles del sistema, identificadores de sesión o información de la cuenta
+    </li>
+    <li
+      data-line="1"
+      data-task=""
+      class="task-list-item">
+      <div class="list-bullet"></div>
+      <input
+        data-line="1"
+        type="checkbox"
+        class="task-list-item-checkbox" />
+      Utilizar manejadores de errores que no muestren información de depuración o de memoria
+    </li>
+    <li
+      data-line="2"
+      data-task=""
+      class="task-list-item">
+      <div class="list-bullet"></div>
+      <input
+        data-line="2"
+        type="checkbox"
+        class="task-list-item-checkbox" />
+      Implementar mensajes de error genéricos y utilizar páginas de error personalizadas
+    </li>
+    <li
+      data-line="3"
+      data-task=""
+      class="task-list-item">
+      <div class="list-bullet"></div>
+      <input
+        data-line="3"
+        type="checkbox"
+        class="task-list-item-checkbox" />
+      La aplicación debe manejar los errores de la aplicación y no basarse en la configuración del servidor
+    </li>
+    <li
+      data-line="4"
+      data-task=""
+      class="task-list-item">
+      <div class="list-bullet"></div>
+      <input
+        data-line="4"
+        type="checkbox"
+        class="task-list-item-checkbox" />
+      Liberar correctamente la memoria asignada cuando se producen condiciones de error
+    </li>
+    <li
+      data-line="5"
+      data-task=""
+      class="task-list-item">
+      <div class="list-bullet"></div>
+      <input
+        data-line="5"
+        type="checkbox"
+        class="task-list-item-checkbox" />
+      La lógica de tratamiento de errores asociada a los controles de seguridad debe denegar el acceso por defecto
+    </li>
+    <li
+      data-line="6"
+      data-task=""
+      class="task-list-item">
+      <div class="list-bullet"></div>
+      <input
+        data-line="6"
+        type="checkbox"
+        class="task-list-item-checkbox" />
+      Todos los controles de registro deben estar implementados en sistemas confiables (por ejemplo, el servidor)
+    </li>
+    <li
+      data-line="7"
+      data-task=""
+      class="task-list-item">
+      <div class="list-bullet"></div>
+      <input
+        data-line="7"
+        type="checkbox"
+        class="task-list-item-checkbox" />
+      El registro de los controles de acceso debe incluir tanto los casos de éxito como de falla
+    </li>
+    <li
+      data-line="8"
+      data-task=""
+      class="task-list-item">
+      <div class="list-bullet"></div>
+      <input
+        data-line="8"
+        type="checkbox"
+        class="task-list-item-checkbox" />
+      Asegurar que los datos de registros (logs) contengan información importante
+    </li>
+    <li
+      data-line="9"
+      data-task=""
+      class="task-list-item">
+      <div class="list-bullet"></div>
+      <input
+        data-line="9"
+        type="checkbox"
+        class="task-list-item-checkbox" />
+      Asegurar que los registros de bitácora (logs) de entrada que incluyen información no confiable, no serán interpretado o ejecutado como código en interfaces de visualización o aplicativos
+    </li>
+    <li
+      data-line="10"
+      data-task=""
+      class="task-list-item">
+      <div class="list-bullet"></div>
+      <input
+        data-line="10"
+        type="checkbox"
+        class="task-list-item-checkbox" />
+      Restringir el acceso a los registros de bitácora (logs), sólo a personal autorizado
+    </li>
+    <li
+      data-line="11"
+      data-task=""
+      class="task-list-item">
+      <div class="list-bullet"></div>
+      <input
+        data-line="11"
+        type="checkbox"
+        class="task-list-item-checkbox" />
+      Utilizar una rutina centralizada para todas las operaciones de registro (logging)
+    </li>
+    <li
+      data-line="12"
+      data-task=""
+      class="task-list-item">
+      <div class="list-bullet"></div>
+      <input
+        data-line="12"
+        type="checkbox"
+        class="task-list-item-checkbox" />
+      No guardar información sensible en registros de bitácora (logs), incluyendo detalles innecesarios del sistema
+    </li>
+    <li
+      data-line="13"
+      data-task=""
+      class="task-list-item">
+      <div class="list-bullet"></div>
+      <input
+        data-line="13"
+        type="checkbox"
+        class="task-list-item-checkbox" />
+      Asegurar que existen mecanismos para conducir un análisis de los registros de bitácora (logs)
+    </li>
+    <li
+      data-line="14"
+      data-task=""
+      class="task-list-item">
+      <div class="list-bullet"></div>
+      <input
+        data-line="14"
+        type="checkbox"
+        class="task-list-item-checkbox" />
+      Registrar todas las fallas de validación
+    </li>
+    <li
+      data-line="15"
+      data-task=""
+      class="task-list-item">
+      <div class="list-bullet"></div>
+      <input
+        data-line="15"
+        type="checkbox"
+        class="task-list-item-checkbox" />
+      Registrar todos los intentos de autenticación, en particular los fallidos
+    </li>
+    <li
+      data-line="16"
+      data-task=""
+      class="task-list-item">
+      <div class="list-bullet"></div>
+      <input
+        data-line="16"
+        type="checkbox"
+        class="task-list-item-checkbox" />
+      Registrar todas las fallas en los controles de acceso
+    </li>
+    <li
+      data-line="17"
+      data-task=""
+      class="task-list-item">
+      <div class="list-bullet"></div>
+      <input
+        data-line="17"
+        type="checkbox"
+        class="task-list-item-checkbox" />
+      Registrar todos los eventos de intento de evasión de controles, incluyendo cambios en el estado de la información no esperados
+    </li>
+    <li
+      data-line="18"
+      data-task=""
+      class="task-list-item">
+      <div class="list-bullet"></div>
+      <input
+        data-line="18"
+        type="checkbox"
+        class="task-list-item-checkbox" />
+      Registrar todos los intentos de conexión con tokens inválidos o vencidos
+    </li>
+    <li
+      data-line="19"
+      data-task=""
+      class="task-list-item">
+      <div class="list-bullet"></div>
+      <input
+        data-line="19"
+        type="checkbox"
+        class="task-list-item-checkbox" />
+      Registrar todas las excepciones del sistema
+    </li>
+    <li
+      data-line="20"
+      data-task=""
+      class="task-list-item">
+      <div class="list-bullet"></div>
+      <input
+        data-line="20"
+        type="checkbox"
+        class="task-list-item-checkbox" />
+      Registrar todas las funciones administrativas, incluyendo cambios en la configuración de seguridad
+    </li>
+    <li
+      data-line="21"
+      data-task=""
+      class="task-list-item">
+      <div class="list-bullet"></div>
+      <input
+        data-line="21"
+        type="checkbox"
+        class="task-list-item-checkbox" />
+      Registrar todas las fallas de conexión de TLS
+    </li>
+    <li
+      data-line="22"
+      data-task=""
+      class="task-list-item">
+      <div class="list-bullet"></div>
+      <input
+        data-line="22"
+        type="checkbox"
+        class="task-list-item-checkbox" />
+      Registrar las fallas de los módulos criptográficos
+    </li>
+    <li
+      data-line="23"
+      data-task=""
+      class="task-list-item">
+      <div class="list-bullet"></div>
+      <input
+        data-line="23"
+        type="checkbox"
+        class="task-list-item-checkbox" />
+      Utilizar una función de hash para validar la integridad de los registros (logs)
+    </li>
+  </ul>
+</div>
+<div>
+  <h3 data-heading="Protección de datos">
+    <div class="heading-collapse-indicator collapse-indicator collapse-icon">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="24"
+        height="24"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        class="svg-icon right-triangle">
+        <path d="M3 8L12 17L21 8"></path>
+      </svg>
+    </div>
+    Protección de datos
+  </h3>
+</div>
+<div>
+  <ul class="contains-task-list has-list-bullet">
+    <li
+      data-line="0"
+      data-task=""
+      class="task-list-item">
+      <div class="list-bullet"></div>
+      <input
+        data-line="0"
+        type="checkbox"
+        class="task-list-item-checkbox" />
+      Implementar el principio de mínimo privilegio, restringir el acceso de los usuarios solamente a la funcionalidad, datos y sistemas de información que son necesarias para realizar sus tareas
+    </li>
+    <li
+      data-line="1"
+      data-task=""
+      class="task-list-item">
+      <div class="list-bullet"></div>
+      <input
+        data-line="1"
+        type="checkbox"
+        class="task-list-item-checkbox" />
+      Proteja todas las copias temporales o en caché de datos sensibles almacenados en el servidor frente a accesos no autorizados y elimine los archivos temporales de trabajo en cuanto dejen de ser necesarios
+    </li>
+    <li
+      data-line="2"
+      data-task=""
+      class="task-list-item">
+      <div class="list-bullet"></div>
+      <input
+        data-line="2"
+        type="checkbox"
+        class="task-list-item-checkbox" />
+      Cifrar toda información altamente sensible almacenada, como por ejemplo: datos para la verificación de la autenticación, incluso en el servidor. Siempre utilice algoritmos de cifrado que hayan sido ampliamente analizados y con buenos antecedentes. Por mayor información, vea "Prácticas Criptográficas"
+    </li>
+    <li
+      data-line="3"
+      data-task=""
+      class="task-list-item">
+      <div class="list-bullet"></div>
+      <input
+        data-line="3"
+        type="checkbox"
+        class="task-list-item-checkbox" />
+      Proteja el código fuente del servidor de forma de que no pueda ser descargado por un usuario
+    </li>
+    <li
+      data-line="4"
+      data-task=""
+      class="task-list-item">
+      <div class="list-bullet"></div>
+      <input
+        data-line="4"
+        type="checkbox"
+        class="task-list-item-checkbox" />
+      No almacene contraseñas, cadenas de conexión u otra información sensible sensible en texto claro o de cualquier otra forma no criptográfica en el lado del cliente. Esto incluye embeber la información en formatos inseguros como: MS viewstate, Adobe flash o código compilado
+    </li>
+    <li
+      data-line="5"
+      data-task=""
+      class="task-list-item">
+      <div class="list-bullet"></div>
+      <input
+        data-line="5"
+        type="checkbox"
+        class="task-list-item-checkbox" />
+      Remueva los comentarios en el código de producción que sea accesible al usuario que puedan revelar detalles sobre los servidores o información sensible
+    </li>
+    <li
+      data-line="6"
+      data-task=""
+      class="task-list-item">
+      <div class="list-bullet"></div>
+      <input
+        data-line="6"
+        type="checkbox"
+        class="task-list-item-checkbox" />
+      Elimine cualquier aplicación que no sea necesaria, así como la documentación de los sistemas que puedan revelar información útil para los atacantes
+    </li>
+    <li
+      data-line="7"
+      data-task=""
+      class="task-list-item">
+      <div class="list-bullet"></div>
+      <input
+        data-line="7"
+        type="checkbox"
+        class="task-list-item-checkbox" />
+      No incluya información sensible en los parámetros de la consulta HTTP GET
+    </li>
+    <li
+      data-line="8"
+      data-task=""
+      class="task-list-item">
+      <div class="list-bullet"></div>
+      <input
+        data-line="8"
+        type="checkbox"
+        class="task-list-item-checkbox" />
+      Deshabilite las funcionalidades de autocompletar en aquellos formularios que contengan información sensible, incluyendo la autenticación
+    </li>
+    <li
+      data-line="9"
+      data-task=""
+      class="task-list-item">
+      <div class="list-bullet"></div>
+      <input
+        data-line="9"
+        type="checkbox"
+        class="task-list-item-checkbox" />
+      Deshabilite el caché en el cliente para las páginas que contengan información sensible. Los encabezados HTTP "Cache-Control: no-store" y "Pragma: no-cache" pueden ser utilizados en conjunto,aunque el segundo sea utilizado como compatibilidad con HTTP/1.0 principalmente
+    </li>
+    <li
+      data-line="10"
+      data-task=""
+      class="task-list-item">
+      <div class="list-bullet"></div>
+      <input
+        data-line="10"
+        type="checkbox"
+        class="task-list-item-checkbox" />
+      La aplicación debe de soportar la eliminación de datos sensibles cuando ya no son requeridos, como por ejemplo: información personal o ciertos datos financieros
+    </li>
+    <li
+      data-line="11"
+      data-task=""
+      class="task-list-item">
+      <div class="list-bullet"></div>
+      <input
+        data-line="11"
+        type="checkbox"
+        class="task-list-item-checkbox" />
+      Implemente controles de acceso adecuados para los datos sensibles almacenados en el servidor. Esto incluye datos en caché, archivos temporales y datos que sólo deben ser accesibles por usuarios específicos del sistema
+    </li>
+  </ul>
+</div>
+<div>
+  <h3 data-heading="Seguridad en las comunicaciones">
+    <div class="heading-collapse-indicator collapse-indicator collapse-icon">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="24"
+        height="24"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        class="svg-icon right-triangle">
+        <path d="M3 8L12 17L21 8"></path>
+      </svg>
+    </div>
+    Seguridad en las comunicaciones
+  </h3>
+</div>
+<div>
+  <ul class="contains-task-list has-list-bullet">
+    <li
+      data-line="0"
+      data-task=""
+      class="task-list-item">
+      <div class="list-bullet"></div>
+      <input
+        data-line="0"
+        type="checkbox"
+        class="task-list-item-checkbox" />
+      Implemente cifrado para todas las transmisiones de información sensible. Esto debe incluir TLS para proteger la conexión y se puede combinar con cifrado discreto de archivos sensibles en conexiones que no estén basadas en HTTP
+    </li>
+    <li
+      data-line="1"
+      data-task=""
+      class="task-list-item">
+      <div class="list-bullet"></div>
+      <input
+        data-line="1"
+        type="checkbox"
+        class="task-list-item-checkbox" />
+      Los certificados TLS deben de ser válidos y poseer el nombre de dominio correcto, no deben estar expirados y deben ser instalados con los certificados intermedios si son requeridos
+    </li>
+    <li
+      data-line="2"
+      data-task=""
+      class="task-list-item">
+      <div class="list-bullet"></div>
+      <input
+        data-line="2"
+        type="checkbox"
+        class="task-list-item-checkbox" />
+      Las conexiones TLS que fallen no deben de transformarse en una conexión insegura
+    </li>
+    <li
+      data-line="3"
+      data-task=""
+      class="task-list-item">
+      <div class="list-bullet"></div>
+      <input
+        data-line="3"
+        type="checkbox"
+        class="task-list-item-checkbox" />
+      Utilizar conexiones TLS para todo el contenido que requiera acceso autenticado y para todo otro tipo de información sensible.
+    </li>
+    <li
+      data-line="4"
+      data-task=""
+      class="task-list-item">
+      <div class="list-bullet"></div>
+      <input
+        data-line="4"
+        type="checkbox"
+        class="task-list-item-checkbox" />
+      Utilizar TLS para las conexione a sistemas externos que involucren funciones o información sensible
+    </li>
+    <li
+      data-line="5"
+      data-task=""
+      class="task-list-item">
+      <div class="list-bullet"></div>
+      <input
+        data-line="5"
+        type="checkbox"
+        class="task-list-item-checkbox" />
+      Utilizar una única implementación estándar de TLS que se encuentre configurada correctamente
+    </li>
+    <li
+      data-line="6"
+      data-task=""
+      class="task-list-item">
+      <div class="list-bullet"></div>
+      <input
+        data-line="6"
+        type="checkbox"
+        class="task-list-item-checkbox" />
+      Especificar los caracteres de codificación para todas las conexiones
+    </li>
+    <li
+      data-line="7"
+      data-task=""
+      class="task-list-item">
+      <div class="list-bullet"></div>
+      <input
+        data-line="7"
+        type="checkbox"
+        class="task-list-item-checkbox" />
+      Filtrar los parámetros que contengan información sensible en el cabezal HTTP referer, cuando existan vínculos a sitios externos
+    </li>
+  </ul>
+</div>
+<div>
+  <h3 data-heading="Configuración de los sistemas">
+    <div class="heading-collapse-indicator collapse-indicator collapse-icon">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="24"
+        height="24"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        class="svg-icon right-triangle">
+        <path d="M3 8L12 17L21 8"></path>
+      </svg>
+    </div>
+    Configuración de los sistemas
+  </h3>
+</div>
+<div>
+  <ul class="contains-task-list has-list-bullet">
+    <li
+      data-line="0"
+      data-task=""
+      class="task-list-item">
+      <div class="list-bullet"></div>
+      <input
+        data-line="0"
+        type="checkbox"
+        class="task-list-item-checkbox" />
+      Asegurarse de que los servidores, los frameworks y los componentes del sistema están utilizando la última versión aprobada
+    </li>
+    <li
+      data-line="1"
+      data-task=""
+      class="task-list-item">
+      <div class="list-bullet"></div>
+      <input
+        data-line="1"
+        type="checkbox"
+        class="task-list-item-checkbox" />
+      Asegurar que los servidores, los frameworks y los componentes del sistema están actualizados con todos los parches emitidos para las versiones en uso
+    </li>
+    <li
+      data-line="2"
+      data-task=""
+      class="task-list-item">
+      <div class="list-bullet"></div>
+      <input
+        data-line="2"
+        type="checkbox"
+        class="task-list-item-checkbox" />
+      Deshabilitar el listado de directorio
+    </li>
+    <li
+      data-line="3"
+      data-task=""
+      class="task-list-item">
+      <div class="list-bullet"></div>
+      <input
+        data-line="3"
+        type="checkbox"
+        class="task-list-item-checkbox" />
+      Restringir el servidor web, los procesos y las cuentas de servicios con el mínimos privilegios posibles
+    </li>
+    <li
+      data-line="4"
+      data-task=""
+      class="task-list-item">
+      <div class="list-bullet"></div>
+      <input
+        data-line="4"
+        type="checkbox"
+        class="task-list-item-checkbox" />
+      Cuando ocurra una excepción, se debe de fallar de forma segura
+    </li>
+    <li
+      data-line="5"
+      data-task=""
+      class="task-list-item">
+      <div class="list-bullet"></div>
+      <input
+        data-line="5"
+        type="checkbox"
+        class="task-list-item-checkbox" />
+      Elimine todas las funcionalidades y archivos que no sean necesarios
+    </li>
+    <li
+      data-line="6"
+      data-task=""
+      class="task-list-item">
+      <div class="list-bullet"></div>
+      <input
+        data-line="6"
+        type="checkbox"
+        class="task-list-item-checkbox" />
+      Eliminar código de pruebas o cualquier funcionalidad que no sea necesaria en producción, previo al despliegue
+    </li>
+    <li
+      data-line="7"
+      data-task=""
+      class="task-list-item">
+      <div class="list-bullet"></div>
+      <input
+        data-line="7"
+        type="checkbox"
+        class="task-list-item-checkbox" />
+      Evite la divulgación de la estructura de directorios a través del archivo robots.txt colocando directorios que estén disponibles para el índice público. Luego “Deshabilitar” el directorio raíz en el archivo robots.txt, en vez de “Deshabilitar” cada directorio individualmente
+    </li>
+    <li
+      data-line="8"
+      data-task=""
+      class="task-list-item">
+      <div class="list-bullet"></div>
+      <input
+        data-line="8"
+        type="checkbox"
+        class="task-list-item-checkbox" />
+      Definir cuáles de los métodos HTTP, GET o POST, la aplicación va a soportar y si deben de ser manejados de forma diferente en las distintas páginas de la aplicación
+    </li>
+    <li
+      data-line="9"
+      data-task=""
+      class="task-list-item">
+      <div class="list-bullet"></div>
+      <input
+        data-line="9"
+        type="checkbox"
+        class="task-list-item-checkbox" />
+      Desactive los métodos HTTP innecesarios, como las extensiones WebDAV. Si se requiere un método HTTP extendido, utilice un mecanismo de autenticación bien probado
+    </li>
+    <li
+      data-line="10"
+      data-task=""
+      class="task-list-item">
+      <div class="list-bullet"></div>
+      <input
+        data-line="10"
+        type="checkbox"
+        class="task-list-item-checkbox" />
+      Si el servidor web acepta tanto HTTP 1.0 como 1.1, asegúrese de que ambos están configurados de forma similar o asegúrese de que entiende cualquier diferencia que pueda existir (por ejemplo, el manejo de métodos HTTP extendidos)
+    </li>
+    <li
+      data-line="11"
+      data-task=""
+      class="task-list-item">
+      <div class="list-bullet"></div>
+      <input
+        data-line="11"
+        type="checkbox"
+        class="task-list-item-checkbox" />
+      Eliminar información innecesaria en los encabezados HTTP de respuesta referidas al SO, versión del servidor web y frameworks de aplicación
+    </li>
+    <li
+      data-line="12"
+      data-task=""
+      class="task-list-item">
+      <div class="list-bullet"></div>
+      <input
+        data-line="12"
+        type="checkbox"
+        class="task-list-item-checkbox" />
+      El almacén de la configuración de seguridad debe de ser en un formato legible para un humano, con el fin de permitir su auditoría
+    </li>
+    <li
+      data-line="13"
+      data-task=""
+      class="task-list-item">
+      <div class="list-bullet"></div>
+      <input
+        data-line="13"
+        type="checkbox"
+        class="task-list-item-checkbox" />
+      Implementar un Sistema de gestión de activos y registrar los componentes del sistema en éste
+    </li>
+    <li
+      data-line="14"
+      data-task=""
+      class="task-list-item">
+      <div class="list-bullet"></div>
+      <input
+        data-line="14"
+        type="checkbox"
+        class="task-list-item-checkbox" />
+      Aislar los ambientes de desarrollo de la red de producción y permitir el acceso solamente a los grupos de desarrollo y testeo específicamente autorizados. Los ambientes de desarrollo a menudo son configurados de forma menos segura que los ambientes de producción y los atacantes pueden utilizar estas diferencias para descubrir vulnerabilidades o una forma para explotarlas
+    </li>
+    <li
+      data-line="15"
+      data-task=""
+      class="task-list-item">
+      <div class="list-bullet"></div>
+      <input
+        data-line="15"
+        type="checkbox"
+        class="task-list-item-checkbox" />
+      Implementar un Sistema de Control de Cambios del Software para gestionar y registrar los cambios al código tanto para los ambientes de desarrollo como para los de producción
+    </li>
+  </ul>
+</div>
+<div>
+  <h3 data-heading="Seguridad de Base de Datos">
+    <div class="heading-collapse-indicator collapse-indicator collapse-icon">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="24"
+        height="24"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        class="svg-icon right-triangle">
+        <path d="M3 8L12 17L21 8"></path>
+      </svg>
+    </div>
+    Seguridad de Base de Datos
+  </h3>
+</div>
+<div>
+  <ul class="contains-task-list has-list-bullet">
+    <li
+      data-line="0"
+      data-task=" "
+      class="task-list-item">
+      <div class="list-bullet"></div>
+      <input
+        data-line="0"
+        type="checkbox"
+        class="task-list-item-checkbox" />
+      Utilice consultas parametrizadas con tipos de datos fuertemente tipados
+    </li>
+    <li
+      data-line="1"
+      data-task=""
+      class="task-list-item">
+      <div class="list-bullet"></div>
+      <input
+        data-line="1"
+        type="checkbox"
+        class="task-list-item-checkbox" />
+      Valide las entradas y codifique las salidas y asegúrese de manejar los meta caracteres. Si esto falla, no ejecute el comando de la base de datos
+    </li>
+    <li
+      data-line="2"
+      data-task=""
+      class="task-list-item">
+      <div class="list-bullet"></div>
+      <input
+        data-line="2"
+        type="checkbox"
+        class="task-list-item-checkbox" />
+      Asegúrese de que todas las variables posean tipos de datos asociados
+    </li>
+    <li
+      data-line="3"
+      data-task=""
+      class="task-list-item">
+      <div class="list-bullet"></div>
+      <input
+        data-line="3"
+        type="checkbox"
+        class="task-list-item-checkbox" />
+      La aplicación debe de utilizar el mínimo nivel de privilegios cuando accede a la base de datos
+    </li>
+    <li
+      data-line="4"
+      data-task=""
+      class="task-list-item">
+      <div class="list-bullet"></div>
+      <input
+        data-line="4"
+        type="checkbox"
+        class="task-list-item-checkbox" />
+      Utilice credenciales seguras para acceder a la base de datos
+    </li>
+    <li
+      data-line="5"
+      data-task=""
+      class="task-list-item">
+      <div class="list-bullet"></div>
+      <input
+        data-line="5"
+        type="checkbox"
+        class="task-list-item-checkbox" />
+      Las cadenas de conexión a la base de datos no deben de estar incluidas en el código de la aplicación. Pueden estar en un archivo de configuración separado en un sistema confiable y debería de estar cifrado
+    </li>
+    <li
+      data-line="6"
+      data-task=""
+      class="task-list-item">
+      <div class="list-bullet"></div>
+      <input
+        data-line="6"
+        type="checkbox"
+        class="task-list-item-checkbox" />
+      Utilice procedimientos almacenados para abstraer el acceso a los datos y elimine los permisos de las tablas en la base de datos
+    </li>
+    <li
+      data-line="7"
+      data-task=""
+      class="task-list-item">
+      <div class="list-bullet"></div>
+      <input
+        data-line="7"
+        type="checkbox"
+        class="task-list-item-checkbox" />
+      Cierre la conexión a la base de datos tan pronto como sea posible
+    </li>
+    <li
+      data-line="8"
+      data-task=""
+      class="task-list-item">
+      <div class="list-bullet"></div>
+      <input
+        data-line="8"
+        type="checkbox"
+        class="task-list-item-checkbox" />
+      Elimine o cambie todas las contraseñas administrativas por defecto. Utilice contraseñas fuertes o frases o implemente autenticación de múltiples factores
+    </li>
+    <li
+      data-line="9"
+      data-task=""
+      class="task-list-item">
+      <div class="list-bullet"></div>
+      <input
+        data-line="9"
+        type="checkbox"
+        class="task-list-item-checkbox" />
+      Deshabilite todas las funcionalidades innecesarias de la base de datos (por ejemplo: procedimientos almacenados innecesarios, servicios no utilizados, paquetes de utilidades). Instale sólo el conjunto mínimo de funcionalidades y opciones requeridas (reducción de la superficie de ataque)
+    </li>
+    <li
+      data-line="10"
+      data-task=""
+      class="task-list-item">
+      <div class="list-bullet"></div>
+      <input
+        data-line="10"
+        type="checkbox"
+        class="task-list-item-checkbox" />
+      Eliminar el contenido innecesario incluido por defecto (por ejemplo: esquemas de ejemplo)
+    </li>
+    <li
+      data-line="11"
+      data-task=""
+      class="task-list-item">
+      <div class="list-bullet"></div>
+      <input
+        data-line="11"
+        type="checkbox"
+        class="task-list-item-checkbox" />
+      Deshabilitar las cuentas por defecto que no son necesarias para la operativa
+    </li>
+    <li
+      data-line="12"
+      data-task=""
+      class="task-list-item">
+      <div class="list-bullet"></div>
+      <input
+        data-line="12"
+        type="checkbox"
+        class="task-list-item-checkbox" />
+      La aplicación debería conectarse a la base de datos con credenciales diferentes para cada nivel de confianza, por ejemplo: usuarios, usuarios solo lectura, invitados, administrador
+    </li>
+  </ul>
+</div>
+<div>
+  <h3 data-heading="Manejo de Archivos">
+    <div class="heading-collapse-indicator collapse-indicator collapse-icon">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="24"
+        height="24"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        class="svg-icon right-triangle">
+        <path d="M3 8L12 17L21 8"></path>
+      </svg>
+    </div>
+    Manejo de Archivos
+  </h3>
+</div>
+<div>
+  <ul class="contains-task-list has-list-bullet">
+    <li
+      data-line="0"
+      data-task=""
+      class="task-list-item">
+      <div class="list-bullet"></div>
+      <input
+        data-line="0"
+        type="checkbox"
+        class="task-list-item-checkbox" />
+      No utilizar directamente información provista por el usuario en ninguna operación dinámica de inclusión (include)
+    </li>
+    <li
+      data-line="1"
+      data-task=""
+      class="task-list-item">
+      <div class="list-bullet"></div>
+      <input
+        data-line="1"
+        type="checkbox"
+        class="task-list-item-checkbox" />
+      Requerir autenticación antes de permitir la transferencia de un archivo al servidor
+    </li>
+    <li
+      data-line="2"
+      data-task=""
+      class="task-list-item">
+      <div class="list-bullet"></div>
+      <input
+        data-line="2"
+        type="checkbox"
+        class="task-list-item-checkbox" />
+      Limite los tipos de archivos que pueden ser cargados al servidor únicamente a aquellos requeridos por la operativa del negocio (por ejemplo: pdf, doc, xls, etc.)
+    </li>
+    <li
+      data-line="3"
+      data-task=""
+      class="task-list-item">
+      <div class="list-bullet"></div>
+      <input
+        data-line="3"
+        type="checkbox"
+        class="task-list-item-checkbox" />
+      Validar los tipos de archivo transferidos verificando la estructura de sus encabezados. La validación del tipo de archivo únicamente por la extensión no es suficiente
+    </li>
+    <li
+      data-line="4"
+      data-task=""
+      class="task-list-item">
+      <div class="list-bullet"></div>
+      <input
+        data-line="4"
+        type="checkbox"
+        class="task-list-item-checkbox" />
+      No almacenar archivos cargados en el contexto de la aplicación web. Los archivos deben almacenarse en un repositorio específico o en una base de datos
+    </li>
+    <li
+      data-line="5"
+      data-task=""
+      class="task-list-item">
+      <div class="list-bullet"></div>
+      <input
+        data-line="5"
+        type="checkbox"
+        class="task-list-item-checkbox" />
+      Evite o restrinja la transferencia de archivos que puedan ser interpretados por el servidor web, por ejemplo: asp, php, jsp, etc
+    </li>
+    <li
+      data-line="6"
+      data-task=""
+      class="task-list-item">
+      <div class="list-bullet"></div>
+      <input
+        data-line="6"
+        type="checkbox"
+        class="task-list-item-checkbox" />
+      Eliminar los permisos de ejecución a las carpetas en las que se cargan archivos por parte de usuarios
+    </li>
+    <li
+      data-line="7"
+      data-task=""
+      class="task-list-item">
+      <div class="list-bullet"></div>
+      <input
+        data-line="7"
+        type="checkbox"
+        class="task-list-item-checkbox" />
+      Implemente una transferencia de archivos seguro en UNIX mediante el uso de discos lógicos y el uso de las rutas (path) correspondientes o mediante la utilización de un entorno chroot
+    </li>
+    <li
+      data-line="8"
+      data-task=""
+      class="task-list-item">
+      <div class="list-bullet"></div>
+      <input
+        data-line="8"
+        type="checkbox"
+        class="task-list-item-checkbox" />
+      Cuando se referencie a un archivo existente en el servidor, utilice una lista de permitidos de nombres y extensiones válidas. Validar el contenido del parámetro pasado contra esta lista de permitidas y si se encuentra una coincidencia, denegar la operación o utilizar transferir un archivo pre-definido
+    </li>
+    <li
+      data-line="9"
+      data-task=""
+      class="task-list-item">
+      <div class="list-bullet"></div>
+      <input
+        data-line="9"
+        type="checkbox"
+        class="task-list-item-checkbox" />
+      No utilizar información provista por el usuario para la generación de redirecciones dinámicas. Si se debe proveer esta funcionalidad, la redirección debe aceptar únicamente caminos relativos dentro de la URL previamente establecidos (lista de directorios relativos permitidos)
+    </li>
+    <li
+      data-line="10"
+      data-task=""
+      class="task-list-item">
+      <div class="list-bullet"></div>
+      <input
+        data-line="10"
+        type="checkbox"
+        class="task-list-item-checkbox" />
+      No incluir en parámetros nombres de directorios o rutas de archivos, en su lugar utilizar índices que internamente se asocien a directorios o rutas pre definidas
+    </li>
+    <li
+      data-line="11"
+      data-task=""
+      class="task-list-item">
+      <div class="list-bullet"></div>
+      <input
+        data-line="11"
+        type="checkbox"
+        class="task-list-item-checkbox" />
+      Nunca envíe la ruta absoluta de un archivo al cliente
+    </li>
+    <li
+      data-line="12"
+      data-task=""
+      class="task-list-item">
+      <div class="list-bullet"></div>
+      <input
+        data-line="12"
+        type="checkbox"
+        class="task-list-item-checkbox" />
+      Asegúrese que los archivos y recursos de la aplicación sean de solo lectura
+    </li>
+    <li
+      data-line="13"
+      data-task=""
+      class="task-list-item">
+      <div class="list-bullet"></div>
+      <input
+        data-line="13"
+        type="checkbox"
+        class="task-list-item-checkbox" />
+      Analizar los archivos transferidos por los clientes en busca de virus y malware
+    </li>
+  </ul>
+</div>
+<div>
+  <h3 data-heading="Manejo de Memoria">
+    <div class="heading-collapse-indicator collapse-indicator collapse-icon">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="24"
+        height="24"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        class="svg-icon right-triangle">
+        <path d="M3 8L12 17L21 8"></path>
+      </svg>
+    </div>
+    Manejo de Memoria
+  </h3>
+</div>
+<div>
+  <ul class="contains-task-list has-list-bullet">
+    <li
+      data-line="0"
+      data-task=""
+      class="task-list-item">
+      <div class="list-bullet"></div>
+      <input
+        data-line="0"
+        type="checkbox"
+        class="task-list-item-checkbox" />
+      Utilice controles en las entrada y salidas de datos no confiables
+    </li>
+    <li
+      data-line="1"
+      data-task=""
+      class="task-list-item">
+      <div class="list-bullet"></div>
+      <input
+        data-line="1"
+        type="checkbox"
+        class="task-list-item-checkbox" />
+      Verifique de dos formas que el largo de los buffers sean los requeridos
+    </li>
+    <li
+      data-line="2"
+      data-task=""
+      class="task-list-item">
+      <div class="list-bullet"></div>
+      <input
+        data-line="2"
+        type="checkbox"
+        class="task-list-item-checkbox" />
+      Cuando utilice primitivas que requieran el número de bytes a copiar, como ser strncpy(), sea consciente que si el tamaño del buffer destino es igual al tamaño del buffer origen, el destino podría quedar sin el NULL-byte requerido del final
+    </li>
+    <li
+      data-line="3"
+      data-task=""
+      class="task-list-item">
+      <div class="list-bullet"></div>
+      <input
+        data-line="3"
+        type="checkbox"
+        class="task-list-item-checkbox" />
+      Verifique los límites de los buffers si se llama a las funciones dentro de un loop y asegúrese de no correr riesgo de escribir fuera del espacio reservado
+    </li>
+    <li
+      data-line="4"
+      data-task=""
+      class="task-list-item">
+      <div class="list-bullet"></div>
+      <input
+        data-line="4"
+        type="checkbox"
+        class="task-list-item-checkbox" />
+      Truncar el largo de todos los strings de entrada a un tamaño razonable antes de pasarlos a una función de copia o concatenación
+    </li>
+    <li
+      data-line="5"
+      data-task=""
+      class="task-list-item">
+      <div class="list-bullet"></div>
+      <input
+        data-line="5"
+        type="checkbox"
+        class="task-list-item-checkbox" />
+      Específicamente libere los recursos, no confíe en el garbage collector(por ejemplo: objetos de conexión, handlers de archivos, etc)
+    </li>
+    <li
+      data-line="6"
+      data-task=""
+      class="task-list-item">
+      <div class="list-bullet"></div>
+      <input
+        data-line="6"
+        type="checkbox"
+        class="task-list-item-checkbox" />
+      Utilice stacks no ejecutables cuando sea posible (NX bit)
+    </li>
+    <li
+      data-line="7"
+      data-task=""
+      class="task-list-item">
+      <div class="list-bullet"></div>
+      <input
+        data-line="7"
+        type="checkbox"
+        class="task-list-item-checkbox" />
+      Evite el uso de primitivas con vulnerabilidades conocidas (por ejemplo: printf, strcat, strcpy, etc)
+    </li>
+    <li
+      data-line="8"
+      data-task=""
+      class="task-list-item">
+      <div class="list-bullet"></div>
+      <input
+        data-line="8"
+        type="checkbox"
+        class="task-list-item-checkbox" />
+      Libere adecuadamente la memoria previa a la salida de una función y de todos los puntos de finalización de la aplicación.
+    </li>
+  </ul>
+</div>
